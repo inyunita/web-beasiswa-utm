@@ -1,0 +1,128 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+* {
+  font-family: 'Roboto', sans-serif;
+}
+/* common */
+body {
+  background: #f7f2e7;
+}
+
+.navbar-light {
+  background-color: #3a3b3b !important;
+}
+
+.nav-item a {
+  color: #e0ece4 !important;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 33px;
+  color: #616161;
+}
+
+.background {
+  background-color: #dbd3cd;
+  margin-top: 50px;
+  padding: 30px;
+}
+
+.custom-card {
+  background: #dbd3cd;
+  border: none;
+  margin-bottom: 30px;
+}
+
+/* tombol cta */
+.cta {
+  display: inline-block;
+  font-size: 15px;
+  background-color: #3a3b3b;
+  color: white;
+  text-decoration: none;
+  padding: 1em 2em;
+  transition: 0.5s ease;
+}
+
+.cta:hover {
+  background: #f7f2e7;
+  color: #3a3b3b;
+}
+
+/* Navbar */
+
+.custom-nav .nav-item .nav-link {
+  font-size: 12pt;
+  margin-right: 2em;
+}
+
+/* Hero */
+.hero {
+  margin-top: 100px;
+}
+.hero .welcome {
+  width: 40vmax;
+}
+.hero .welcome p {
+  margin-top: 46px;
+  margin-bottom: 66px;
+}
+.hero .gambar img {
+  width: 40vmax;
+  margin-left: 25px;
+}
+
+/* beasiswa */
+.beasiswa {
+  margin-top: 150px;
+}
+
+/* Halaman Daftar Beasiswa */
+.content {
+  margin-top: 100px;
+  min-height: 100%;
+  position: relative;
+}
+
+.list-group a {
+  background: #dbd3cd;
+  font-size: 16px;
+  line-height: 33px;
+  color: #3a3b3b;
+  font-weight: bolder;
+}
+
+.list-group aktif {
+  background-color: #bcd2bd;
+}
+
+.custom-sidebar {
+  background: #ffffff;
+  border: solid #dfe6e9 0.5px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+input[type='text'] {
+  border-color: #3a3b3b;
+}
+
+textarea,
+select,
+input {
+  border-color: #3a3b3b !important;
+}
+
+/* footer */
+footer p {
+  color: black;
+  text-align: center;
+  margin: auto;
+  padding: auto;
+}
