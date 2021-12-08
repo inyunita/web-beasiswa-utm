@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/listbea', function () {
+    return view('adminlistsiswa');
+});
+Route::get('/viewsiswa', function () {
+    return view('adminviewsiswa');
+});
+Route::get('/daftar', function () {
+    return view('daftarbeasiswa');
+});
+Route::get('/status', function () {
+    return view('statusbeasiswa');
+});
+
+
