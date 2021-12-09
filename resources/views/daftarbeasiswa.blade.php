@@ -4,21 +4,23 @@
   @section('kanan')
         <div class="kanan col-md-8">
           <div class="custom-card p-5">
-            <form class="form-crud row g-3" action="" method="">
+            <form class="form-crud row g-3" action="{{ url('/store') }}" method="post">
+              @csrf 
+              {{-- fungsi @csrf untuk menyaring apakah yang masuk adalam manusia atau bot --}}
               <div class="col-md-12">
                 <label for="jenis" class="form-label">Pilih Jenis Beasiswa</label>
-                <select id="jenis" class="form-select">
+                <select id="jenis" class="form-select" name="jenis_bea">
                   <option>Beasiswa Prestasi</option>
                   <option>Beasiswa Tidak Mampu</option>
                 </select>
               </div>
               <div class="col-md-6">
                 <label for="name" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="name" name="name" />
+                <input type="text" class="form-control" id="name" name="nama" />
               </div>
               <div class="col-md-6">
                 <label for="jeniskelamin" class="form-label">Jenis Kelamin</label>
-                <select id="jeniskelamin" class="form-select">
+                <select id="jeniskelamin" class="form-select" name="jenis_kel">
                   <option selected>Laki-Laki</option>
                   <option>Perempuan</option>
                 </select>
@@ -41,26 +43,26 @@
               </div>
               <div class="col-12">
                 <label for="inputAddress" class="form-label">Alamat</label>
-                <textarea name="address" id="address" cols="100%" rows="5" class="form-control"></textarea>
+                <textarea name="alamat" id="address" cols="100%" rows="5" class="form-control"></textarea>
               </div>
               <div class="col-md-6">
                 <label for="nomor" class="form-label">No WA</label>
-                <input type="text" class="form-control" id="nomor" name="nomor" />
+                <input type="text" class="form-control" id="nomor" name="wa" />
               </div>
               <div class="col-md-6">
                 <label for="Email" class="form-label">Email</label>
                 <input type="text" class="form-control" id="Email" name="email" />
               </div>
-              <div class="col-12">
+              {{-- <div class="col-12">
                 <label for="formFile" class="form-label">Scan Transkrip Nilai</label>
                 <input class="form-control" type="file" id="formFile" />
                 <img class="mt-3 mb-5" src="image/ktp.jpg" alt="KTP" />
-              </div>
+              </div> --}}
 
               <div class="col-12">
-                <button type="submit" class="btn cta-sm">Submit</button>
-                <button type="submit" class="btn btn-primary">Update</button>
-                <button type="submit" class="btn btn-danger">Delete</button>
+                <button type="submit" class="btn cta">Submit</button>
+                {{-- <button type="submit" class="btn btn-primary">Update</button>
+                <button type="submit" class="btn btn-danger">Delete</button> --}}
               </div>
             </form>
           </div>

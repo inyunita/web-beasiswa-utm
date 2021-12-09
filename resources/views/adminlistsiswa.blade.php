@@ -85,12 +85,12 @@
               </form>
             </div>
 
-            <!-- JIKA SUDAH ADA DATA -->
+
 
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
+                  
                   <th scope="col">Nama Mahasiswa</th>
                   <th scope="col">NIM</th>
                   <th scope="col">Jenis Beasiswa</th>
@@ -99,22 +99,16 @@
                 </tr>
               </thead>
               <tbody>
+                @foreach ($data as $mhs)
                 <tr>
-                  <th scope="row">1</th>
-                  <td>Anita Rusmiandi</td>
-                  <td>190411100500</td>
-                  <td>Beasiswa Prestasi</td>
-                  <td>Disetujui</td>
+                  <td>{{ $mhs->nama }}</td>
+                  <td>{{ $mhs->nim }}</td>
+                  <td>{{ $mhs->jenis_bea }}</td>
+                  <td>{{ $mhs->status_bea }}</td>
                   <td><a href="">view</a></td>
                 </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Yenita Kusrahardini</td>
-                  <td>190411100600</td>
-                  <td>Beasiswa Tidak Mampu</td>
-                  <td>Ditolak</td>
-                  <td><a href="">view</a></td>
-                </tr>
+                @endforeach
+               
               </tbody>
             </table>
           </div>

@@ -17,7 +17,7 @@
     <!-- custom CSS -->
     <link rel="stylesheet" href="CSS/style.css" />
 
-    <title>Beasiswa UTM</title>
+    <title>Beasiswa UTM | {{ $title }}</title>
   </head>
 
   <body>

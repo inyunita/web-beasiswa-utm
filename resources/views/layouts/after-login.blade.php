@@ -57,7 +57,7 @@
             <h6 class="text-break">Indah Yunita</h6>
           </div>
           <div class="list-group custom-card">
-            <a href="/daftar" class="list-group-item list-group-item-action"><i class="bi bi-house-door-fill"></i> Pendaftaran Beasiswa</a>
+            <a href="{{ url('create') }}" class="list-group-item list-group-item-action"><i class="bi bi-house-door-fill"></i> Pendaftaran Beasiswa</a>
             <a href="/status" class="list-group-item list-group-item-action"><i class="bi bi-house-door-fill"></i> Status Beasiswa</a>
             <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-box-arrow-right"></i> Logout</a>
           </div>
