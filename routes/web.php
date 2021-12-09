@@ -26,6 +26,12 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/status', function () {
+    return view('statusbeasiswa',[
+        "title" => "Home"
+    ]);
+});
+
 // Route::get('/listbea', function () {
 //     return view('adminlistsiswa',[
 //         "title" => "Admin"

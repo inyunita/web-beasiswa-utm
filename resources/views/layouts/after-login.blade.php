@@ -54,7 +54,7 @@
       <div class="row justify-content-between">
         <div class="kiri col-md-4">
           <div class="custom-card p-3 pb-1">
-            <h6 class="text-break">Indah Yunita</h6>
+            {{-- <h6 class="text-break">Indah Yunita</h6> --}}
           </div>
           <div class="list-group custom-card">
             <a href="{{ url('create') }}" class="list-group-item list-group-item-action"><i class="bi bi-house-door-fill"></i> Pendaftaran Beasiswa</a>

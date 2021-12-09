@@ -58,7 +58,7 @@
             <p>Admin</p>
           </div>
           <div class="list-group custom-card">
-            <a href="#" class="list-group-item list-group-item-action" aria-current="true"></i> Dashboard</a>
+            {{-- <a href="#" class="list-group-item list-group-item-action" aria-current="true"></i> Dashboard</a> --}}
             <a href="/listbea" class="list-group-item list-group-item-action"> List Pemohon Beasiswa</a>
             <a href="#" class="list-group-item list-group-item-action"> Logout</a>
           </div>
@@ -68,7 +68,7 @@
           <div class="custom-card p-5">
             <div class="row">
               <!-- Pencarian -->
-              <form class="col-md-7 d-flex align-items-center pencarian" method="POST">
+              {{-- <form class="col-md-7 d-flex align-items-center pencarian" method="POST">
                 <input class="form-control form-control-lg-2" type="text" placeholder="Temukan Mahasiswa" aria-label="default input example" />
                 <!-- Button cari -->
                 <button type="button" class="btn cta-sm">Cari</button>
@@ -81,7 +81,7 @@
                   <option value="2">Ditolak</option>
                   <option value="2">Menunggu persetujuan</option>
                 </select>
-              </form>
+              </form> --}}
             </div>
 
 

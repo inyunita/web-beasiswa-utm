@@ -41,7 +41,7 @@ class mahasiswacontroller extends Controller
     {
         $data = $request->except(['_token']);
         mahasiswa::insert($data);
-        return redirect('/listbea');
+        return redirect('/status');
     }
 
     /**

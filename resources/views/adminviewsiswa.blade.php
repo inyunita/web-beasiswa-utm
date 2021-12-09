@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- custom CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{{ asset ('css/style.css') }}" />
 
     <!-- font awesome icon -->
     <script src="https://kit.fontawesome.com/f8dd01d0f4.js" crossorigin="anonymous"></script>
