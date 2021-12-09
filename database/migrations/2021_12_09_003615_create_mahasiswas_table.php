@@ -21,7 +21,7 @@ class CreateMahasiswasTable extends Migration
             $table->string('jenis_kel');
             $table->string('jenis_bea');
             $table->string('status_bea')->default('Menunggu Persetujuan');
-            $table->integer('ipk');
+            $table->float('ipk');
             $table->integer('gaji');
             $table->longText('alamat');
             $table->string('wa');

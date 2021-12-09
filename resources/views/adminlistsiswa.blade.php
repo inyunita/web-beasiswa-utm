@@ -58,10 +58,9 @@
             <p>Admin</p>
           </div>
           <div class="list-group custom-card">
-            <a href="#" class="list-group-item list-group-item-action" aria-current="true"><i class="bi bi-tree-fill"></i> Biodata</a>
-            <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-house-door-fill"></i> Pendaftaran Beasiswa</a>
-            <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-house-door-fill"></i> Status Beasiswa</a>
-            <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-box-arrow-right"></i> Logout</a>
+            <a href="#" class="list-group-item list-group-item-action" aria-current="true"></i> Dashboard</a>
+            <a href="/listbea" class="list-group-item list-group-item-action"> List Pemohon Beasiswa</a>
+            <a href="#" class="list-group-item list-group-item-action"> Logout</a>
           </div>
         </div>
 
@@ -105,7 +104,7 @@
                   <td>{{ $mhs->nim }}</td>
                   <td>{{ $mhs->jenis_bea }}</td>
                   <td>{{ $mhs->status_bea }}</td>
-                  <td><a href="">view</a></td>
+                  <td><a href="{{ url('/show/'. $mhs->id )}}">view</a></td>
                 </tr>
                 @endforeach
                

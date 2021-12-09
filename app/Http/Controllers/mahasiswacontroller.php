@@ -52,7 +52,10 @@ class mahasiswacontroller extends Controller
      */
     public function show($id)
     {
-        //
+        $data = mahasiswa::findOrFail($id);
+        return view('adminviewsiswa')->with([
+            'data' => $data
+        ]);
     }
 
     /**
@@ -75,7 +78,10 @@ class mahasiswacontroller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $item = mahasiswa::findOrFail($id);
+        $data = $request->except(['_token']);
+        $item->update($data);
+        return redirect('/listbea');
     }
 
     /**

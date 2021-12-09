@@ -44,7 +44,7 @@
               <a class="nav-link" href="">Kontak</a>
             </li>
           </ul>
-        </div>
+        </div> 
       </div>
     </nav>
     <!-- Akhir Navbar -->
@@ -55,10 +55,11 @@
         <div class="kiri col-md-4">
           <div class="custom-card p-3 pb-1">
             <h6 class="text-break">Indah Yunita</h6>
+            <p>Admin</p>
           </div>
           <div class="list-group custom-card">
             <a href="#" class="list-group-item list-group-item-action" aria-current="true"></i> Dashboard</a>
-            <a href="#" class="list-group-item list-group-item-action"> List Pemohon Beasiswa</a>
+            <a href="/listbea" class="list-group-item list-group-item-action"> List Pemohon Beasiswa</a>
             <a href="#" class="list-group-item list-group-item-action"> Logout</a>
           </div>
         </div>
@@ -80,31 +81,28 @@
                     <p>Email</p>
                   </div>
                   <div class="col-md-6">
-                    <p>190411100500</p>
-                    <p>Anita Yolanda</p>
-                    <p>Perempuan</p>
-                    <p>3.99</p>
-                    <p>5000.000</p>
-                    <p>Jl jalan jalan no 2</p>
-                    <p>088217514427</p>
-                    <p>anitttaa99@gmail.com</p>
+                    <p>{{ $data->nim }}</p>
+                    <p>{{ $data->nama }}</p>
+                    <p>{{ $data->jenis_kel }}</p>
+                    <p>{{ $data->ipk }}</p>
+                    <p>{{ $data->gaji }}</p>
+                    <p>{{ $data->alamat }}</p>
+                    <p>{{ $data->wa }}</p>
+                    <p>{{ $data->email }}</p>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-12">
-                <p>Scan Transkrip</p>
-                <img src="image/ktp.jpg" class="img-fluid" alt="KTP" />
               </div>
             </div>
             <div class="col-md-12">
               <h5>Keputusan</h5>
-              <form method="" action="">
+              <form method="POST" action="{{ url('/update/' . $data->id) }}">
+                @csrf
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                  <input class="form-check-input" type="radio" name="status_bea" value="Disetujui" id="flexRadioDefault1" />
                   <label class="form-check-label" for="flexRadioDefault1"> Setujui </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                  <input class="form-check-input" type="radio" name="status_bea" value="Ditolak" id="flexRadioDefault2" />
                   <label class="form-check-label" for="flexRadioDefault2">Tolak </label>
                 </div>
                 <!-- Button submit -->

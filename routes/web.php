@@ -17,12 +17,14 @@ use App\http\Controllers\mahasiswacontroller;
 Route::get('/listbea',[mahasiswacontroller::class, 'index']);
 Route::get('/create', [mahasiswacontroller::class, 'create']);
 Route::post('/store', [mahasiswacontroller::class, 'store']);
+Route::get('/show/{id}',[mahasiswacontroller::class, 'show']);
+Route::post('/update/{id}', [mahasiswacontroller::class, 'update']);
 
-// Route::get('/', function () {
-//     return view('index',[
-//         "title" => "Home"
-//     ]);
-// });
+Route::get('/', function () {
+    return view('index',[
+        "title" => "Home"
+    ]);
+});
 
 // Route::get('/listbea', function () {
 //     return view('adminlistsiswa',[
@@ -36,7 +38,7 @@ Route::post('/store', [mahasiswacontroller::class, 'store']);
 // });
 // Route::get('/daftar', function () {
 //     return view('daftarbeasiswa',[
-//         "title" => "Admin"
+//         "title" => "Pendaftaran"
 //     ]);
 // });
 // Route::get('/status', function () {
