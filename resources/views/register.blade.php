@@ -19,7 +19,7 @@
           </div>
 
           <div class="d-flex justify-content-center mt-5 mb-5">
-            <button type="submit" class="btn cta">Sign in</button>
+            <button type="submit" class="btn cta">Register</button>
           </div>
           <small>sudah punya akun? <a href="/login">Masuk</a></small>
         </form>

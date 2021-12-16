@@ -31,7 +31,11 @@ Route::get('/status', function () {
     return view('statusbeasiswa');
 });
 
-Route::get('/login',[loginController::class, 'index']);
+Route::get('/login',[loginController::class, 'index'])->middleware('guest');
+Route::post('/login',[loginController::class, 'authenticate']);
+Route::post('/logout',[loginController::class, 'logout']);
+
+
 Route::get('/register',[registerController::class, 'index']);
 Route::post('/register', [registerController::class, 'store']);
 

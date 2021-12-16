@@ -38,10 +38,10 @@
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">Tentang Beasiswa</a>
+              <a class="nav-link" href="/">Tentang Beasiswa</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">Kontak</a>
+              <a class="nav-link" href="/">Kontak</a>
             </li>
           </ul>
         </div>
@@ -59,7 +59,11 @@
           <div class="list-group custom-card">
             <a href="{{ url('create') }}" class="list-group-item list-group-item-action"><i class="bi bi-house-door-fill"></i> Pendaftaran Beasiswa</a>
             <a href="/status" class="list-group-item list-group-item-action"><i class="bi bi-house-door-fill"></i> Status Beasiswa</a>
-            <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-box-arrow-right"></i> Logout</a>
+            <form action="/logout" method="post">
+              @csrf
+              <button type="submit" class="list-group-item list-group-item-action"><i class="bi bi-box-arrow-right"></i>Logout</button>
+            </form>
+           
           </div>
         </div>
         {{-- Kanan --}}
