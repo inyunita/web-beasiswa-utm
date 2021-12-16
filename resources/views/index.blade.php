@@ -6,7 +6,7 @@
         <div class="col-md-6 align-self-center welcome" data-aos="fade-up" data-aos-duration="1500">
           <h1>Beasiswa Mahasiswa Universitas Trunojoyo Madura</h1>
           <p>Program beasiswa ini merupakan program kampus khusus untuk Mahasiswa Universitas Trunojoyo Madura yang berprestasi</p>
-          <a class="cta" href="">Daftar Sekarang</a>
+          <a class="cta" href="/register">Daftar Sekarang</a>
         </div>
         <div class="col-md-6 gambar" data-aos="fade-left" data-aos-delay="150" data-aos-duration="2000">
           <img src="aset/rektorat.png" alt="ilustrasi" />

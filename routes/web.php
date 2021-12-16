@@ -1,7 +1,10 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\mahasiswacontroller;
+use App\Http\Controllers\loginController;
+use App\Http\controllers\registerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,16 +24,16 @@ Route::get('/show/{id}',[mahasiswacontroller::class, 'show']);
 Route::post('/update/{id}', [mahasiswacontroller::class, 'update']);
 
 Route::get('/', function () {
-    return view('index',[
-        "title" => "Home"
-    ]);
+    return view('index');
 });
 
 Route::get('/status', function () {
-    return view('statusbeasiswa',[
-        "title" => "Home"
-    ]);
+    return view('statusbeasiswa');
 });
+
+Route::get('/login',[loginController::class, 'index']);
+Route::get('/register',[registerController::class, 'index']);
+Route::post('/register', [registerController::class, 'store']);
 
 // Route::get('/listbea', function () {
 //     return view('adminlistsiswa',[
