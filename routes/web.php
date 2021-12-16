@@ -19,10 +19,10 @@ use GuzzleHttp\Middleware;
 |
 */
 
-Route::get('/listbea',[mahasiswacontroller::class, 'index']);
+Route::get('/listbea',[mahasiswacontroller::class, 'index'])->middleware('admin');
 Route::get('/create', [mahasiswacontroller::class, 'create'])->middleware('auth');
 Route::post('/store', [mahasiswacontroller::class, 'store'])->middleware('auth');
-Route::get('/show/{id}',[mahasiswacontroller::class, 'show']);
+Route::get('/show/{id}',[mahasiswacontroller::class, 'show'])->middleware('admin');
 Route::post('/update/{id}', [mahasiswacontroller::class, 'update']);
 
 Route::get('/', function () {
