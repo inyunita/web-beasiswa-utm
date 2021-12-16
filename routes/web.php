@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\http\Controllers\mahasiswacontroller;
 use App\Http\Controllers\loginController;
 use App\Http\controllers\registerController;
+use App\Http\controllers\adminController;
+use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +20,8 @@ use App\Http\controllers\registerController;
 */
 
 Route::get('/listbea',[mahasiswacontroller::class, 'index']);
-Route::get('/create', [mahasiswacontroller::class, 'create']);
-Route::post('/store', [mahasiswacontroller::class, 'store']);
+Route::get('/create', [mahasiswacontroller::class, 'create'])->middleware('auth');
+Route::post('/store', [mahasiswacontroller::class, 'store'])->middleware('auth');
 Route::get('/show/{id}',[mahasiswacontroller::class, 'show']);
 Route::post('/update/{id}', [mahasiswacontroller::class, 'update']);
 
@@ -35,6 +37,9 @@ Route::get('/login',[loginController::class, 'index'])->middleware('guest');
 Route::post('/login',[loginController::class, 'authenticate']);
 Route::post('/logout',[loginController::class, 'logout']);
 
+Route::get('/admin',[adminController::class, 'index']);
+Route::post('/admin',[adminController::class, 'authenticate']);
+Route::post('/adminlogout',[adminController::class, 'logout']);
 
 Route::get('/register',[registerController::class, 'index']);
 Route::post('/register', [registerController::class, 'store']);

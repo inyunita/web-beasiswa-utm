@@ -60,7 +60,10 @@
           <div class="list-group custom-card">
             {{-- <a href="#" class="list-group-item list-group-item-action" aria-current="true"></i> Dashboard</a> --}}
             <a href="/listbea" class="list-group-item list-group-item-action"> List Pemohon Beasiswa</a>
-            <a href="#" class="list-group-item list-group-item-action"> Logout</a>
+            <form action="/adminlogout" method="post">
+              @csrf
+              <button type="submit" class="list-group-item list-group-item-action"><i class="bi bi-box-arrow-right"></i>Logout</button>
+            </form>
           </div>
         </div>
 
